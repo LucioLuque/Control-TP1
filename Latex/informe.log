@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.4.20)  20 APR 2026 19:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.4.20)  20 APR 2026 20:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -474,7 +474,7 @@ File: figures/ej1_step_disturbance.png Graphic file (type png)
 Package pdftex.def Info: figures/ej1_step_disturbance.png  used on input line 167.
 (pdftex.def)             Requested size: 386.96027pt x 191.13432pt.
  [3]
-<figures/ej1_ramp_disturbance.png, id=70, 714.9912pt x 353.1594pt>
+<figures/ej1_ramp_disturbance.png, id=69, 714.9912pt x 353.1594pt>
 File: figures/ej1_ramp_disturbance.png Graphic file (type png)
 <use figures/ej1_ramp_disturbance.png>
 Package pdftex.def Info: figures/ej1_ramp_disturbance.png  used on input line 182.
@@ -491,74 +491,75 @@ Overfull \hbox (28.33011pt too wide) detected at line 247
  []
 
 [6]
-Overfull \hbox (47.36438pt too wide) detected at line 312
-[] [] [] \OT1/cmr/m/n/12 = [] [] = [] = 0 (\OML/cmm/m/it/12 K[] \OMS/cmsy/m/n/12 6\OT1/cmr/m/n/12 = 0)\OML/cmm/m/it/12 :
- []
-
-[7]
-Overfull \hbox (5.24406pt too wide) in paragraph at lines 358--359
+Overfull \hbox (5.24406pt too wide) in paragraph at lines 351--352
 []\OT1/cmr/m/n/12 El pro-ce-so se rea-li-za ite-ra-ti-va-men-te has-ta en-con-trar va-lo-res $(\OML/cmm/m/it/12 ^^P; ![]\OT1/cmr/m/n/12 )$ que cum-plan si-mult^^Sanea-
  []
 
-<figures/ej1_closed_loop_step_2.png, id=103, 614.295pt x 382.3083pt>
+[7]
+<figures/ej1_closed_loop_step_2.png, id=105, 614.295pt x 382.3083pt>
 File: figures/ej1_closed_loop_step_2.png Graphic file (type png)
 <use figures/ej1_closed_loop_step_2.png>
-Package pdftex.def Info: figures/ej1_closed_loop_step_2.png  used on input line 372.
+Package pdftex.def Info: figures/ej1_closed_loop_step_2.png  used on input line 365.
 (pdftex.def)             Requested size: 409.71692pt x 254.99017pt.
-<figures/ej1_bode_comparison.png, id=105, 453.8556pt x 340.1508pt>
+<figures/ej1_bode_comparison.png, id=107, 453.8556pt x 340.1508pt>
 File: figures/ej1_bode_comparison.png Graphic file (type png)
 <use figures/ej1_bode_comparison.png>
-Package pdftex.def Info: figures/ej1_bode_comparison.png  used on input line 385.
+Package pdftex.def Info: figures/ej1_bode_comparison.png  used on input line 378.
 (pdftex.def)             Requested size: 409.71692pt x 307.07233pt.
-[8 <./figures/ej1_closed_loop_step_2.png>]
+ [8 <./figures/ej1_closed_loop_step_2.png>]
 <figures/ej1_ramp_pi.png, id=117, 714.9912pt x 353.1594pt>
 File: figures/ej1_ramp_pi.png Graphic file (type png)
 <use figures/ej1_ramp_pi.png>
-Package pdftex.def Info: figures/ej1_ramp_pi.png  used on input line 400.
+Package pdftex.def Info: figures/ej1_ramp_pi.png  used on input line 393.
 (pdftex.def)             Requested size: 386.96027pt x 191.13432pt.
- [9 <./figures/ej1_bode_comparison.png> <./figures/ej1_ramp_pi.png>] [10]
+ [9 <./figures/ej1_bode_comparison.png> <./figures/ej1_ramp_pi.png>]
+Overfull \hbox (47.36438pt too wide) detected at line 426
+[] [] [] \OT1/cmr/m/n/12 = [] [] = [] = 0 (\OML/cmm/m/it/12 K[] \OMS/cmsy/m/n/12 6\OT1/cmr/m/n/12 = 0)\OML/cmm/m/it/12 :
+ []
+
+[10]
 <figures/ej2_nyquist_nominal.png, id=132, 498.1812pt x 424.4658pt>
 File: figures/ej2_nyquist_nominal.png Graphic file (type png)
 <use figures/ej2_nyquist_nominal.png>
-Package pdftex.def Info: figures/ej2_nyquist_nominal.png  used on input line 444.
+Package pdftex.def Info: figures/ej2_nyquist_nominal.png  used on input line 471.
 (pdftex.def)             Requested size: 295.90588pt x 252.12956pt.
 <figures/ej2_fault_response.png, id=134, 414.348pt x 311.7246pt>
 File: figures/ej2_fault_response.png Graphic file (type png)
 <use figures/ej2_fault_response.png>
-Package pdftex.def Info: figures/ej2_fault_response.png  used on input line 466.
+Package pdftex.def Info: figures/ej2_fault_response.png  used on input line 493.
 (pdftex.def)             Requested size: 341.43307pt x 256.86679pt.
  [11 <./figures/ej2_nyquist_nominal.png>]
 <figures/ej2_root_locus.png, id=143, 875.4306pt x 369.5406pt>
 File: figures/ej2_root_locus.png Graphic file (type png)
 <use figures/ej2_root_locus.png>
-Package pdftex.def Info: figures/ej2_root_locus.png  used on input line 481.
+Package pdftex.def Info: figures/ej2_root_locus.png  used on input line 508.
 (pdftex.def)             Requested size: 409.71692pt x 172.95107pt.
  [12 <./figures/ej2_fault_response.png> <./figures/ej2_root_locus.png>]
 <figures/ej2_bode_fault.png, id=156, 453.8556pt x 340.1508pt>
 File: figures/ej2_bode_fault.png Graphic file (type png)
 <use figures/ej2_bode_fault.png>
-Package pdftex.def Info: figures/ej2_bode_fault.png  used on input line 500.
+Package pdftex.def Info: figures/ej2_bode_fault.png  used on input line 527.
 (pdftex.def)             Requested size: 386.96027pt x 290.01707pt.
  [13 <./figures/ej2_bode_fault.png>]
 
-LaTeX Warning: Reference `fig:ej2_lead_design' on page 14 undefined on input line 553.
+LaTeX Warning: Reference `fig:ej2_lead_design' on page 14 undefined on input line 580.
 
 [14]
 <figures/ej2_bode_compensated.png, id=171, 1293.1512pt x 568.0422pt>
 File: figures/ej2_bode_compensated.png Graphic file (type png)
 <use figures/ej2_bode_compensated.png>
-Package pdftex.def Info: figures/ej2_bode_compensated.png  used on input line 579.
+Package pdftex.def Info: figures/ej2_bode_compensated.png  used on input line 606.
 (pdftex.def)             Requested size: 455.24411pt x 199.97054pt.
 <figures/ej2_step_fault_compensated.png, id=173, 1293.1512pt x 356.532pt>
 File: figures/ej2_step_fault_compensated.png Graphic file (type png)
 <use figures/ej2_step_fault_compensated.png>
-Package pdftex.def Info: figures/ej2_step_fault_compensated.png  used on input line 592.
+Package pdftex.def Info: figures/ej2_step_fault_compensated.png  used on input line 619.
 (pdftex.def)             Requested size: 455.24411pt x 125.51161pt.
  [15 <./figures/ej2_bode_compensated.png> <./figures/ej2_step_fault_compensated.png>]
 <figures/ej2_nyquist_compensated.png, id=185, 1293.1512pt x 356.532pt>
 File: figures/ej2_nyquist_compensated.png Graphic file (type png)
 <use figures/ej2_nyquist_compensated.png>
-Package pdftex.def Info: figures/ej2_nyquist_compensated.png  used on input line 622.
+Package pdftex.def Info: figures/ej2_nyquist_compensated.png  used on input line 649.
 (pdftex.def)             Requested size: 455.24411pt x 125.51161pt.
  [16 <./figures/ej2_nyquist_compensated.png>] (./informe.aux
 LaTeX Info: Redefining \. on input line 25.
@@ -577,9 +578,9 @@ Here is how much of TeX's memory you used:
  34586 multiletter control sequences out of 15000+600000
  479327 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 70i,15n,79p,577b,863s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 70i,15n,79p,577b,837s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on informe.pdf (16 pages, 1027942 bytes).
+Output written on informe.pdf (16 pages, 1028198 bytes).
 PDF statistics:
  257 PDF objects out of 1000 (max. 8388607)
  189 compressed objects within 2 object streams

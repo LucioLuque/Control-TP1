@@ -783,12 +783,12 @@ INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
 INPUT ./figures/ej1_step_disturbance.png
 INPUT ./figures/ej1_step_disturbance.png
 INPUT figures/ej1_step_disturbance.png
 INPUT ./figures/ej1_step_disturbance.png
 INPUT ./figures/ej1_step_disturbance.png
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
 INPUT ./figures/ej1_ramp_disturbance.png
 INPUT ./figures/ej1_ramp_disturbance.png
 INPUT figures/ej1_ramp_disturbance.png

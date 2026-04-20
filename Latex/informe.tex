@@ -125,7 +125,7 @@ Evaluando la planta $G(s)$ obtenida, se calculan los márgenes de estabilidad a 
 \end{tabular}
 \end{center}
 
-Dado que valores adecuados requieren $\text{MG} > 6\ \si{dB}$ y $\text{MF} \approx 30^\circ$--$60^\circ$, el sistema ya posee márgenes holgados. Por lo tanto, \textit{no es estrictamente necesario introducir un compensador por motivos de estabilidad}.
+Dado que valores adecuados requieren $\text{MG} > 6\ \si{dB}$ y $\text{MF} \approx 30^\circ$--$60^\circ$, el sistema ya posee márgenes holgados. Por lo tanto, no es estrictamente necesario introducir un compensador por motivos de estabilidad.
 
 % -------------------------------------------------------
 \subsubsection*{c) Sistema a lazo cerrado con perturbación tipo escalón (referencia escalón unitario)}
@@ -280,9 +280,10 @@ Sustituyendo $G(s) = \dfrac{0.25}{s[0.003s^2+0.0515s+0.2]}$ y $C(s) = K_p + K_i/
   \frac{\Theta(s)}{N(s)} &= \frac{0.25\,s}{0.003s^4 + 0.0515s^3 + 0.2s^2 + 0.25K_p s + 0.25K_i} \label{eq:TnPI}
 \end{align}
 
-	extbf{Demostración de $e_{ss}=0$.}
+	{Demostración de $e_{ss}=0$.}
 \
-Para una referencia rampa (\(R(s)=1/s^2\)) y una perturbación constante de magnitud $0.2$, definimos
+
+Para una referencia rampa (\(R(s)=1/s\)) y una perturbación constante de magnitud $0.2$, definimos
 \[
   E(s)=R(s)-\Theta(s)
 \]
@@ -293,22 +294,13 @@ y
 
 Sustituyendo las expresiones de entrada y las funciones de transferencia:
 \[
-  e_{ss}=\lim_{s\to 0} s\left[\frac{1}{s^2} - \frac{\Theta(s)}{V(s)}\frac{1}{s^2} - \frac{\Theta(s)}{N(s)}\frac{0.2}{s}\right]
+  e_{ss}=\lim_{s\to 0} s\left[\frac{1}{s} - \frac{\Theta(s)}{V(s)}\frac{1}{s} - \frac{\Theta(s)}{N(s)}\frac{0.2}{s}\right]
 \]
 
-Agrupando términos:
+Analizando los límites:
 \[
-  e_{ss}=\lim_{s\to 0}\left[\frac{s}{s^2}\left(1-\frac{\Theta(s)}{V(s)}\right) - \frac{\Theta(s)}{N(s)}\frac{0.2}{s}\right]
-\]
-
-Analizando el primer término del límite:
-\[
-  \lim_{s\to 0}\frac{1}{s}\left(1-\frac{\Theta(s)}{V(s)}\right)
-\]
-
-\[
-  \lim_{s\to 0}\frac{1}{s}\left(1-\frac{\Theta(s)}{V(s)}\right)
-  = \lim_{s\to 0}\frac{0.003s^3 + 0.0515s^2 + 0.2s}{0.003s^4 + 0.0515s^3 + 0.2s^2 + 0.25K_p s + 0.25K_i} =\frac{0}{0.25K_i}=0 \quad (K_i\neq 0).
+  \lim_{s\to 0}\frac{\Theta(s)}{V(s)}
+  = \lim_{s\to 0}\frac{0.25(K_ps + K_i)}{0.003s^4 + 0.0515s^3 + 0.2s^2 + 0.25K_p s + 0.25K_i} =\frac{0.25K_i}{0.25K_i}=1 \quad (K_i\neq 0).
 \]
 
 Ahora el término asociado a la perturbación:
@@ -317,10 +309,11 @@ Ahora el término asociado a la perturbación:
   =\frac{0}{0.25K_i}=0 \quad (K_i\neq 0).
 \]
 
-Con esto, ambos contribuyentes al error en estado estacionario son nulos, por lo que
+Con esto, el error en estado estacionario es:
 \[
-  e_{ss}=0.
+  e_{ss}=1-1-0=0.
 \]
+
 
 \textbf{Especificaciones sobre $\zeta$ y $\omega_n$.}
 Para aproximar el sistema de orden 4 como uno de orden 2 con polos dominantes, las restricciones son:
@@ -403,12 +396,46 @@ La Fig.~\ref{fig:ej1_ramp_pi} muestra la respuesta del sistema compensado ante u
 \end{figure}
 
 El error en estado estacionario ante la rampa es nulo, lo que se demuestra analíticamente:
+Para una referencia rampa (\(R(s)=1/s^2\)) y una perturbación constante de magnitud $0.2$, definimos
 \[
-  e_{ss} = \lim_{s\to 0}\frac{1}{s}\!\left[1 - \frac{\Theta(s)}{V(s)}\right]
-  = \lim_{s\to 0}\frac{0.003s^3+0.0515s^2+0.2s}{0.003s^4+\cdots+0.25K_i} = 0
+  E(s)=R(s)-\Theta(s)
+\]
+y
+\[
+  e_{ss}=\lim_{s\to 0} s\,E(s).
 \]
 
-Este resultado era esperable: el controlador PI convierte al sistema en \textbf{Tipo~2}, lo que garantiza seguimiento con error nulo ante entradas rampa.
+Sustituyendo las expresiones de entrada y las funciones de transferencia:
+\[
+  e_{ss}=\lim_{s\to 0} s\left[\frac{1}{s^2} - \frac{\Theta(s)}{V(s)}\frac{1}{s^2} - \frac{\Theta(s)}{N(s)}\frac{0.2}{s}\right]
+\]
+
+Agrupando términos:
+\[
+  e_{ss}=\lim_{s\to 0}\left[\frac{s}{s^2}\left(1-\frac{\Theta(s)}{V(s)}\right) - \frac{\Theta(s)}{N(s)}\frac{0.2}{s}\right]
+\]
+
+Analizando el primer término del límite:
+\[
+  \lim_{s\to 0}\frac{1}{s}\left(1-\frac{\Theta(s)}{V(s)}\right)
+\]
+
+\[
+  \lim_{s\to 0}\frac{1}{s}\left(1-\frac{\Theta(s)}{V(s)}\right)
+  = \lim_{s\to 0}\frac{0.003s^3 + 0.0515s^2 + 0.2s}{0.003s^4 + 0.0515s^3 + 0.2s^2 + 0.25K_p s + 0.25K_i} =\frac{0}{0.25K_i}=0 \quad (K_i\neq 0).
+\]
+
+Ahora el término asociado a la perturbación:
+\[
+  \lim_{s\to 0}\frac{\Theta(s)}{N(s)}=\lim_{s\to 0}\frac{0.25s}{0.003s^4 + 0.0515s^3 + 0.2s^2 + 0.25K_p s + 0.25K_i}
+  =\frac{0}{0.25K_i}=0 \quad (K_i\neq 0).
+\]
+
+Con esto, ambos contribuyentes al error en estado estacionario son nulos, por lo que
+\[
+  e_{ss}=0.
+\]
+
 
 % -------------------------------------------------------
 \subsubsection*{e) Conclusión sobre el controlador}
