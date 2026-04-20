@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1776706130 "/home/luqo/Documents/Control-TP1/Latex/informe.tex" "informe.pdf" "informe" 1776706134
+["pdflatex"] 1776723908 "/home/luqo/Documents/Control-TP1/Latex/informe.tex" "informe.pdf" "informe" 1776723911
   "/etc/texmf/web2c/texmf.cnf" 1776702713 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/luqo/Documents/Control-TP1/Latex/informe.tex" 1776706124 27886 37e5cf61cf08af5bb8541039cabc995d ""
+  "/home/luqo/Documents/Control-TP1/Latex/informe.tex" 1776723902 27883 8fa1456a8d8529b59a090c74fe00a77b ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -127,10 +127,10 @@
   "figures/ej2_nyquist_nominal.png" 1776695428 67839 e93794a8f51e8ef32af5a1b08693b60e ""
   "figures/ej2_root_locus.png" 1776695428 34323 bdbbc31277be4d2808e794c8e5d6fba6 ""
   "figures/ej2_step_fault_compensated.png" 1776695428 85384 6594de5ccf84e5af6c3c2303ed1d1d20 ""
-  "informe.aux" 1776706134 7579 bdbda78cdc1c1e872e42fef63bfb0739 "pdflatex"
-  "informe.out" 1776706134 1811 52698424e09555bf06c424da6ceab055 "pdflatex"
-  "informe.tex" 1776706124 27886 37e5cf61cf08af5bb8541039cabc995d ""
-  "informe.toc" 1776706134 687 008bde06bad9c26ad2b616f5788dc225 "pdflatex"
+  "informe.aux" 1776723911 7579 bdbda78cdc1c1e872e42fef63bfb0739 "pdflatex"
+  "informe.out" 1776723911 1811 52698424e09555bf06c424da6ceab055 "pdflatex"
+  "informe.tex" 1776723902 27883 8fa1456a8d8529b59a090c74fe00a77b ""
+  "informe.toc" 1776723911 687 008bde06bad9c26ad2b616f5788dc225 "pdflatex"
   (generated)
   "informe.aux"
   "informe.log"
