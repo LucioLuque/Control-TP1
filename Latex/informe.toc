@@ -1,0 +1,7 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Ejercicio 1: Sistema de Control de un Rotor de Aspas}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Parte A: Análisis del Sistema}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Parte B: Diseño del Sistema de Control}{5}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Ejercicio 2: Análisis y Control frente a Perturbaciones}{11}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Parte A: Análisis de Sensibilidad y Robustez}{11}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Parte B: Diseño de Compensador para Estabilidad Robusta}{14}{subsection.2.2}%

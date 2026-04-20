@@ -93,10 +93,9 @@ def search_pi(zeta, wn, poles):
     plt.axhline(info["SteadyStateValue"], linestyle='--', label='Valor final')
     plt.axhline(1.02 * info["SteadyStateValue"], linestyle=':', label='Banda 2%')
     plt.axhline(0.98 * info["SteadyStateValue"], linestyle=':')
-    plt.xlabel('Tiempo [s]')
-    plt.ylabel('Salida')
-    plt.title('Respuesta al escalón del sistema en lazo cerrado')
+    plt.xlabel('Tiempo [s]', fontsize=12)
+    plt.ylabel('Salida', fontsize=12)
     plt.grid(True)
-    plt.legend()
+    plt.legend(fontsize=12)
     plt.show()
     return z, Kp

@@ -134,6 +134,22 @@ Dado que valores adecuados requieren $\text{MG} > 6\ \si{dB}$ y $\text{MF} \appr
 Considerando el sistema en lazo cerrado con realimentación unitaria, la salida ante una referencia $V(s)$ y una perturbación de carga $N(s)$ es:
 
 \[
+  E(s) = V(s) - \Theta(s)
+\]
+
+\[
+  \Theta(s) = G(s)\bigl(E(s) + N(s)\bigr)
+\]
+
+\[
+  \Theta(s) = G(s)\bigl(V(s) - \Theta(s) + N(s)\bigr)
+\]
+
+\[
+  (1 + G(s))\,\Theta(s) = G(s)\,V(s) + G(s)\,N(s)
+\]
+
+\[
   \Theta(s) = \underbrace{\frac{G(s)}{1+G(s)}}_{\Theta/V}\,V(s)
              + \underbrace{\frac{G(s)}{1+G(s)}}_{\Theta/N}\,N(s)
 \]
@@ -210,10 +226,31 @@ La respuesta al escalón se muestra en la Fig.~\ref{fig:ej1_cl_step}.
 \end{figure}
 
 El error del $20\%$ se verifica analíticamente. Con perturbación de magnitud $0.2$:
+
+\[
+  E(s) = R(s) - \Theta(s)
+\]
+
+\[
+  e_{ss} = \lim_{s\to 0} s\,E(s)
+\]
+
 \[
   e_{ss} = \lim_{s\to 0} s\!\left[\frac{1}{s} - \frac{\Theta}{V}\frac{1}{s} - \frac{\Theta}{N}\frac{0.2}{s}\right]
-  = 1 - 1 - 0.2 = 0.2 \quad (20\%)
 \]
+
+\[
+  e_{ss} = \lim_{s\to 0} s\left[\frac{1}{s}
+    - \frac{0.25}{0.003s^3 + 0.0515s^2 + 0.2s + 0.25}\cdot\frac{1}{s}
+    - \frac{0.25}{0.003s^3 + 0.0515s^2 + 0.2s + 0.25}\cdot\frac{0.2}{s}
+  \right]
+\]
+
+\[
+  e_{ss} = 1 - 1 - 0.2 = 0.2 \quad (20\%)
+\]
+
+
 
 Si bien el tiempo de establecimiento y el sobrepico cumplen con las especificaciones, el error de precisión ante perturbación constante es inaceptable. Es necesario introducir un controlador.
 
@@ -243,20 +280,46 @@ Sustituyendo $G(s) = \dfrac{0.25}{s[0.003s^2+0.0515s+0.2]}$ y $C(s) = K_p + K_i/
   \frac{\Theta(s)}{N(s)} &= \frac{0.25\,s}{0.003s^4 + 0.0515s^3 + 0.2s^2 + 0.25K_p s + 0.25K_i} \label{eq:TnPI}
 \end{align}
 
-\textbf{Demostración de $e_{ss}=0$.}
-Con referencia escalón unitario y perturbación constante de magnitud $0.2$:
-
+	extbf{Demostración de $e_{ss}=0$.}
+\
+Para una referencia rampa (\(R(s)=1/s^2\)) y una perturbación constante de magnitud $0.2$, definimos
 \[
-  e_{ss} = \lim_{s\to 0} s\!\left[\frac{1}{s} - \frac{\Theta}{V}\frac{1}{s} - \frac{\Theta}{N}\frac{0.2}{s}\right]
+  E(s)=R(s)-\Theta(s)
+\]
+y
+\[
+  e_{ss}=\lim_{s\to 0} s\,E(s).
+\]
+
+Sustituyendo las expresiones de entrada y las funciones de transferencia:
+\[
+  e_{ss}=\lim_{s\to 0} s\left[\frac{1}{s^2} - \frac{\Theta(s)}{V(s)}\frac{1}{s^2} - \frac{\Theta(s)}{N(s)}\frac{0.2}{s}\right]
+\]
+
+Agrupando términos:
+\[
+  e_{ss}=\lim_{s\to 0}\left[\frac{s}{s^2}\left(1-\frac{\Theta(s)}{V(s)}\right) - \frac{\Theta(s)}{N(s)}\frac{0.2}{s}\right]
+\]
+
+Analizando el primer término del límite:
+\[
+  \lim_{s\to 0}\frac{1}{s}\left(1-\frac{\Theta(s)}{V(s)}\right)
 \]
 
 \[
-  \lim_{s\to 0}\frac{\Theta}{V} = \frac{0.25K_i}{0.25K_i} = 1, \qquad
-  \lim_{s\to 0}\frac{\Theta}{N} = \frac{0}{0.25K_i} = 0 \quad (K_i \neq 0)
+  \lim_{s\to 0}\frac{1}{s}\left(1-\frac{\Theta(s)}{V(s)}\right)
+  = \lim_{s\to 0}\frac{0.003s^3 + 0.0515s^2 + 0.2s}{0.003s^4 + 0.0515s^3 + 0.2s^2 + 0.25K_p s + 0.25K_i} =\frac{0}{0.25K_i}=0 \quad (K_i\neq 0).
 \]
 
+Ahora el término asociado a la perturbación:
 \[
-  \therefore \quad e_{ss} = 1 - 1 - 0 = 0
+  \lim_{s\to 0}\frac{\Theta(s)}{N(s)}=\lim_{s\to 0}\frac{0.25s}{0.003s^4 + 0.0515s^3 + 0.2s^2 + 0.25K_p s + 0.25K_i}
+  =\frac{0}{0.25K_i}=0 \quad (K_i\neq 0).
+\]
+
+Con esto, ambos contribuyentes al error en estado estacionario son nulos, por lo que
+\[
+  e_{ss}=0.
 \]
 
 \textbf{Especificaciones sobre $\zeta$ y $\omega_n$.}
@@ -303,6 +366,13 @@ El proceso se realiza iterativamente hasta encontrar valores $(\zeta, \omega_n)$
   \bottomrule
 \end{tabular}
 \end{center}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.90\textwidth]{figures/ej1_closed_loop_step_2.png}
+  \caption{Respuesta al escalón unitario a lazo cerrado con compensador, con banda del $2\%$.}
+  \label{fig:ej1_closed_loop_step_2}
+\end{figure}
 
 % -------------------------------------------------------
 \subsubsection*{c) Márgenes del sistema compensado — Diagrama de Bode}
