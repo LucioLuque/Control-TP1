@@ -125,7 +125,7 @@ Evaluando la planta $G(s)$ obtenida, se calculan los márgenes de estabilidad a 
 \end{tabular}
 \end{center}
 
-Dado que valores adecuados requieren $\text{MG} > 6\ \si{dB}$ y $\text{MF} \approx 30^\circ$--$60^\circ$, el sistema ya posee márgenes holgados. Por lo tanto, no es estrictamente necesario introducir un compensador por motivos de estabilidad.
+Dado que valores adecuados requieren $\text{MG} > 6\ \si{dB}$ y $\text{MF} \approx 30^\circ$--$60^\circ$, el sistema ya posee márgenes buenos. Por lo tanto, no es estrictamente necesario introducir un compensador por motivos de estabilidad.
 
 % -------------------------------------------------------
 \subsubsection*{c) Sistema a lazo cerrado con perturbación tipo escalón (referencia escalón unitario)}
@@ -169,7 +169,7 @@ Con $V(s) = 1/s$ (escalón unitario) y $N(s) = 0.1/s$ (perturbación de magnitud
   \label{fig:ej1_step_dist}
 \end{figure}
 
-Se observa que el sistema sigue al escalón con error cero, pero la perturbación introduce un desplazamiento constante en la salida total por encima de la referencia. Esto ocurre porque $\lim_{s\to 0} s \cdot \frac{G(s)}{1+G(s)} \cdot \frac{0.1}{s} = 0.1$, es decir, el sistema es de \emph{Tipo 1} y no puede rechazar perturbaciones constantes en lazo cerrado sin compensación adicional.
+Se observa que el sistema sigue al escalón con error cero, pero la perturbación introduce un desplazamiento constante en la salida total por encima de la referencia. Esto ocurre porque $\lim_{s\to 0} s \cdot \frac{G(s)}{1+G(s)} \cdot \frac{0.1}{s} = 0.1$, es decir, el sistema es de Tipo 1 y no puede rechazar perturbaciones constantes en lazo cerrado sin compensación adicional.
 
 % -------------------------------------------------------
 \subsubsection*{d) Sistema a lazo cerrado con perturbación tipo escalón (referencia rampa unitaria)}
@@ -258,7 +258,7 @@ Si bien el tiempo de establecimiento y el sobrepico cumplen con las especificaci
 \subsubsection*{b) Diseño del controlador PI por root locus}
 % -------------------------------------------------------
 
-Se cumplen el tiempo de establecimiento y máximo sobrepico, pero el error es mucho mayor que el especificado. Es por esto que se plantea el uso de un controlador PI de la forma:
+Se plantea el uso de un controlador PI de la forma:
 \[
   C(s) = K_p + \frac{K_i}{s}
 \]
@@ -280,10 +280,7 @@ Sustituyendo $G(s) = \dfrac{0.25}{s[0.003s^2+0.0515s+0.2]}$ y $C(s) = K_p + K_i/
   \frac{\Theta(s)}{N(s)} &= \frac{0.25\,s}{0.003s^4 + 0.0515s^3 + 0.2s^2 + 0.25K_p s + 0.25K_i} \label{eq:TnPI}
 \end{align}
 
-	{Demostración de $e_{ss}=0$.}
-\
-
-Para una referencia rampa (\(R(s)=1/s\)) y una perturbación constante de magnitud $0.2$, definimos
+\textbf{Demostración de $e_{ss}=0$.} Para una referencia escalón (\(R(s)=1/s\)) y una perturbación constante de magnitud $0.2$, definimos
 \[
   E(s)=R(s)-\Theta(s)
 \]
@@ -316,7 +313,7 @@ Con esto, el error en estado estacionario es:
 
 
 \textbf{Especificaciones sobre $\zeta$ y $\omega_n$.}
-Para aproximar el sistema de orden 4 como uno de orden 2 con polos dominantes, las restricciones son:
+La especificaciones pedidas son las siguientes:
 
 \begin{align*}
   M_p \leq 15\%   &\;\Rightarrow\; \zeta \geq -\frac{\ln(0.15)}{\sqrt{\pi^2+\ln^2(0.15)}} \approx 0.517 \\[4pt]
@@ -531,7 +528,7 @@ La Fig.~\ref{fig:ej2_bode_fault} compara los diagramas de Bode para $B=0.5$ y $B
 
 Con $B=-0.1$ el margen de fase es \textbf{negativo}, confirmando la inestabilidad. Para otorgar al sistema un margen de seguridad ante la falla, se propone un \textbf{compensador lead (adelantador de fase)}.
 
-El compensador lead tiene la forma $C(s) = K_c\,\frac{s+z}{s+p}$ con $p > z > 0$, y su contribución es una \emph{fase positiva} en la región de cruce de ganancia. Esto incrementa directamente el margen de fase del sistema nominal, generando una reserva que permite tolerar la pérdida de fase producida por la degradación de $B$.
+El compensador \emph{lead} tiene la forma $C(s) = K_c\,\frac{s+z}{s+p}$ con $p > z > 0$, y su contribución es una \emph{fase positiva} en la región de cruce de ganancia. Esto incrementa directamente el margen de fase del sistema nominal, generando una reserva que permite tolerar la pérdida de fase producida por la degradación de $B$.
 
 Un compensador \emph{lag} reduce la ganancia en altas frecuencias pero no agrega fase en el cruce, por lo que no resuelve el problema de margen. Un compensador \emph{lead-lag} también podría utilizarse, pero en este caso el objetivo es exclusivamente aumentar el margen de fase, por lo que el lead puro es suficiente y más simple de diseñar.
 
