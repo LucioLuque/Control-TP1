@@ -576,6 +576,13 @@ Para cubrir el caso más exigente ($\phi_{\max,\text{diseño}} \approx 47^\circ$
 
 Dado $\alpha$, se realiza una búsqueda del polo $p$ que minimiza el error entre el margen de fase compensado y el objetivo. El gráfico de la Fig.~\ref{fig:ej2_lead_design} ilustra el proceso.
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.75\textwidth]{figures/ej2_lead_design.png}
+  \caption{Búsqueda del polo $p$ del compensador lead para cada objetivo de margen de fase.}
+  \label{fig:ej2_lead_design}
+\end{figure}
+
 Los parámetros de los tres compensadores diseñados son:
 
 \begin{center}
@@ -589,8 +596,6 @@ Los parámetros de los tres compensadores diseñados son:
   \bottomrule
 \end{tabular}
 \end{center}
-
-\textbf{¿Por qué es posible usar este compensador?} El compensador lead normalizado tiene ganancia unitaria en CC, por lo que no modifica la ganancia de lazo en $s=0$. Dado que el sistema nominal ya es de Tipo~1 (tiene un integrador), el error de posición ante una entrada escalón sigue siendo nulo tras la compensación.
 
 % -------------------------------------------------------
 \subsubsection*{b) Verificación mediante diagramas de Bode}
@@ -653,9 +658,19 @@ En los tres casos la curva de Nyquist gira en sentido horario. El compensador le
 \textbf{2) Desventajas de incrementar el MF.}
 \begin{itemize}
   \item \textbf{Mayor polo $p$:} compensadores con MF más alto requieren polos más grandes, lo que amplifica el ruido de alta frecuencia y puede excitar dinámicas no modeladas.
-  \item \textbf{Reducción del ancho de banda en lazo cerrado:} paradójicamente, el mayor amortiguamiento reduce el ancho de banda (de $3.72\ \si{rad/s}$ para MF = 35\ensuremath{^\circ} a $2.36\ \si{rad/s}$ para MF = 65\ensuremath{^\circ}), lo que se traduce en una respuesta más lenta ante referencias.
+  \item \textbf{Reducción del ancho de banda en lazo cerrado:} paradójicamente, el mayor amortiguamiento reduce el ancho de banda, lo que se traduce en una respuesta más lenta ante referencias:
+  \begin{center}
+  \begin{tabular}{cc}
+    \toprule
+    MF objetivo & Ancho de banda (rad/s) \\
+    \midrule
+    $35^\circ$ & $3.72$ \\
+    $50^\circ$ & $3.37$ \\
+    $65^\circ$ & $2.36$ \\
+    \bottomrule
+  \end{tabular}
+  \end{center}
   \item \textbf{Diseño excesivamente conservador:} un MF muy elevado implica sobrea\-mor\-ti\-gua\-mien\-to en condiciones normales, sacrificando dinamismo sin que la falla llegue a ocurrir.
-  \item \textbf{Ganancia alta de alta frecuencia:} el factor $K_c = 1/\alpha \approx 6.44$ amplifica las señales de alta frecuencia, incrementando la sensibilidad del sistema al ruido en la medición.
 \end{itemize}
 
 \end{document}
