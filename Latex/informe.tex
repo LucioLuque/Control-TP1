@@ -236,7 +236,7 @@ El error del $20\%$ se verifica analíticamente. Con perturbación de magnitud $
 \]
 
 \[
-  e_{ss} = \lim_{s\to 0} s\!\left[\frac{1}{s} - \frac{\Theta}{V}\frac{1}{s} - \frac{\Theta}{N}\frac{0.2}{s}\right]
+  e_{ss} = \lim_{s\to 0} s\!\left[\frac{1}{s} - \frac{\Theta(s)}{V(s)}\frac{1}{s} - \frac{\Theta(s)}{N(s)}\frac{0.2}{s}\right]
 \]
 
 \[
@@ -267,8 +267,8 @@ Se plantea el uso de un controlador PI de la forma:
 Con realimentación unitaria y perturbación de carga $N(s)$, la salida es:
 
 \begin{align*}
-  \theta &= \bigl[(V(s)-\theta)C(s) + N(s)\bigr]G(s) \\
-  (1 + G(s)C(s))\,\theta &= G(s)C(s)\,V(s) + G(s)\,N(s) \\[4pt]
+  \theta(s) &= \bigl[(V(s)-\theta(s))C(s) + N(s)\bigr]G(s) \\
+  (1 + G(s)C(s))\,\theta(s) &= G(s)C(s)\,V(s) + G(s)\,N(s) \\[4pt]
   \theta(s) &= \underbrace{\frac{G(s)C(s)}{1+G(s)C(s)}}_{\Theta/V}\,V(s)
              + \underbrace{\frac{G(s)}{1+G(s)C(s)}}_{\Theta/N}\,N(s)
 \end{align*}
